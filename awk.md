@@ -1,12 +1,13 @@
 ---
 title: "man awk"
-author: John Doe
-date: March 22, 2005
-output: word_document
+author: copy JaceK Wieteska from Ubuntu 20.04.5 LTS
+date: January 22, 2023
+output: markdown
 ---
 
 ## NAME
 gawk - pattern scanning and processing language
+
 ## SYNOPSIS
 gawk [ POSIX or GNU style options ] `-f` program-file [ -- ]..
 gawk [ POSIX or GNU style options ] [ .. ] program-text file ...
@@ -17,3 +18,5 @@ Gawk is the GNU Project's implementation of the AWK programming language. It con
 The command line consists of options to gawk itself, the AWK program text (if not supplied  via the -f or `--incude` options), and values to be made available in the ARGC and ARGV pre-defined AWK variables.
 
 When <u>gawk</u> is invoked with the `--profile` option, it starts gathering profiling statistics from the execution of the program. <u>Gawk</u> runs more slowly in this mode, and automatically produces an execution profile in the file awkprof.out when done. See the `--profile` options, below.
+
+<u>Gawk</u> also has an integrated debugger. An interactive debugging session can be started by supplying the `--debug` option to the command line. In this mode of execution, <u>gawk</u> loads the AWK source code and then prompts for debugging commands. <u>Gawk</u> can only debug AWK program source provided with the `-f` and `--include` options. The debugger is documented in <u>GAWK</u>: <u>Effective AWK Programming</u>.
