@@ -1,6 +1,7 @@
 ---
-title: "man awk"
-author: copy JaceK Wieteska from Ubuntu 20.04.5 LTS
+title: "awk"
+author: Jacek Wieteska
+description: 'copy from man Ubuntu 20.04.5 LTS'
 date: January 22, 2023
 output: markdown
 ---
