@@ -9,10 +9,12 @@ output: markdown
 ## NAME
 gawk - pattern scanning and processing language
 
+---
 ## SYNOPSIS
 gawk [ POSIX or GNU style options ] `-f` program-file [ -- ]..
 gawk [ POSIX or GNU style options ] [ .. ] program-text file ...
 
+---
 ## DESCRIPTION
 Gawk is the GNU Project's implementation of the AWK programming language. It conform to the definition of the language in the POSIX 1003.1 standard. This version in turn is based on the description in *The AWK Programming Language*, by Aho, Kerninghan, and Weinberger. GAwk provides the additional features found in the current version of Brain Kerninghan's *awk* and numerous GNU-specific extensions.
 
@@ -22,12 +24,15 @@ When *gawk* is invoked with the `--profile` option, it starts gathering profilin
 
 *Gawk* also has an integrated debugger. An interactive debugging session can be started by supplying the `--debug` option to the command line. In this mode of execution, *gawk* loads the AWK source code and then prompts for debugging commands. *Gawk* can only debug AWK program source provided with the `-f` and `--include` options. The debugger is documented in *GAWK*: *Effective AWK Programming*.
 
+---
 ## OPTION FORMAT
 *Gawk* options may be either traditional POSIX-style one letter options, or GNU-style long option, or GNU-style long option. POSIX options start with a single `"-"`, while long options start with `"--"`. Long options are provided for both GNU-specific features and for POSIX-mandated features.
 
 *Gawk*-specific options are typically used in long-options form. Arguments to long options are either joined with the options by an = sign, with no intervening space, or they may be provided in the next command line argument. Long options may be abbreviated, as long as abbreviation remains unique.
 
 Additionally, every long options has a corresponding short options, so that the option's functionality may be used from within `#!` executable csripts.
+
+---
 
 ## OPTIONS
 
@@ -52,7 +57,4 @@ Additionally, every long options has a corresponding short options, so that the 
 `-c`  
 `--traditional`  
 >Run in *compatibility* mode. In compatibility mode, *gawk* behaves identically to Brian Kernighan's *awk*; none of the GNU-specific extensions are recognized. See GNU EXTENSIONS, below, for more information.
-
-
-
 
