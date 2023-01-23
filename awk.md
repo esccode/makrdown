@@ -14,36 +14,36 @@ gawk [ POSIX or GNU style options ] `-f` program-file [ -- ]..
 gawk [ POSIX or GNU style options ] [ .. ] program-text file ...
 
 ## DESCRIPTION
-Gawk is the GNU Project's implementation of the AWK programming language. It conform to the definition of the language in the POSIX 1003.1 standard. This version in turn is based on the description in <u>The AWK Programming Language</u>, by Aho, Kerninghan, and Weinberger. GAwk provides the additional features found in the current version of Brain Kerninghan's <u>awk</u> and numerous GNU-specific extensions.
+Gawk is the GNU Project's implementation of the AWK programming language. It conform to the definition of the language in the POSIX 1003.1 standard. This version in turn is based on the description in *The AWK Programming Language*, by Aho, Kerninghan, and Weinberger. GAwk provides the additional features found in the current version of Brain Kerninghan's *awk* and numerous GNU-specific extensions.
 
 The command line consists of options to gawk itself, the AWK program text (if not supplied  via the -f or `--incude` options), and values to be made available in the ARGC and ARGV pre-defined AWK variables.
 
-When <u>gawk</u> is invoked with the `--profile` option, it starts gathering profiling statistics from the execution of the program. <u>Gawk</u> runs more slowly in this mode, and automatically produces an execution profile in the file awkprof.out when done. See the `--profile` options, below.
+When *gawk* is invoked with the `--profile` option, it starts gathering profiling statistics from the execution of the program. *Gawk* runs more slowly in this mode, and automatically produces an execution profile in the file awkprof.out when done. See the `--profile` options, below.
 
-<u>Gawk</u> also has an integrated debugger. An interactive debugging session can be started by supplying the `--debug` option to the command line. In this mode of execution, <u>gawk</u> loads the AWK source code and then prompts for debugging commands. <u>Gawk</u> can only debug AWK program source provided with the `-f` and `--include` options. The debugger is documented in <u>GAWK</u>: <u>Effective AWK Programming</u>.
+*Gawk* also has an integrated debugger. An interactive debugging session can be started by supplying the `--debug` option to the command line. In this mode of execution, *gawk* loads the AWK source code and then prompts for debugging commands. *Gawk* can only debug AWK program source provided with the `-f` and `--include` options. The debugger is documented in *GAWK*: *Effective AWK Programming*.
 
 ## OPTION FORMAT
-<u>Gawk</u> options may be either traditional POSIX-style one letter options, or GNU-style long option, or GNU-style long option. POSIX options start with a single `"-"`, while long options start with `"--"`. Long options are provided for both GNU-specific features and for POSIX-mandated features.
+*Gawk* options may be either traditional POSIX-style one letter options, or GNU-style long option, or GNU-style long option. POSIX options start with a single `"-"`, while long options start with `"--"`. Long options are provided for both GNU-specific features and for POSIX-mandated features.
 
-<u>Gawk</u>-specific options are typically used in long-options form. Arguments to long options are either joined with the options by an = sign, with no intervening space, or they may be provided in the next command line argument. Long options may be abbreviated, as long as abbreviation remains unique.
+*Gawk*-specific options are typically used in long-options form. Arguments to long options are either joined with the options by an = sign, with no intervening space, or they may be provided in the next command line argument. Long options may be abbreviated, as long as abbreviation remains unique.
 
 Additionally, every long options has a corresponding short options, so that the option's functionality may be used from within `#!` executable csripts.
 
 ## OPTIONS
 
-<u>Gawk</u> accepts the following options. Standard options are listed first, followed by options for <u>gawk</u> extensions, listed alphabetically by short options.
+*Gawk* accepts the following options. Standard options are listed first, followed by options for *gawk* extensions, listed alphabetically by short options.
 
-`-f` <u>program-file</u><br/>
-`--file` <u>program-file</u><br/>
->Read the AWK program source from the file <u>program-file</u>, instead of from the first command line argument. Multiple `-f` (or `--file`) options may be used. Files read with `-f` are treated as if they begin with an implicit `@namespace "awk"` statement.
+`-f` *program-file*  
+`--file` *program-file*
+>Read the AWK program source from the file *program-file*, instead of from the first command line argument. Multiple `-f` (or `--file`) options may be used. Files read with `-f` are treated as if they begin with an implicit `@namespace "awk"` statement.
 
-`-F` <u>fs</u><br/>
-`--field-separator` <u>fs</u><br/>
->Use <u>fs</u> for the input field separator (the value of the *FS* predefined variable).
+`-F` *fs*  
+`--field-separator` *fs*
+>Use *fs* for the input field separator (the value of the *FS* predefined variable).
 
-`-v` <u>var</u>=<u>val</u><br/>
-`--assign` u>var</u>=<u>val</u><br/>
->Assign the value <u>val</u>, before execution of the program begins. Such variable values are available to the *BEGIN* rule of an *AWK* program.
+`-v` *var=val*  
+`--assign` *var=val*
+>Assign the value *val*, before execution of the program begins. Such variable values are available to the *BEGIN* rule of an *AWK* program.
 
 
 
