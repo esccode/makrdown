@@ -31,9 +31,20 @@ Additionally, every long options has a corresponding short options, so that the 
 
 ## OPTIONS
 
-```<u>Gawk</u>``` accepts the following options. Standard options are listed first, followed by options for <u>gawk</u> extensions, listed alphabetically by short options.
+<u>Gawk</u> accepts the following options. Standard options are listed first, followed by options for <u>gawk</u> extensions, listed alphabetically by short options.
 
 `-f` <u>program-file</u><br/>
 `--file` <u>program-file</u><br/>
+>Read the AWK program source from the file <u>program-file</u>, instead of from the first command line argument. Multiple `-f` (or `--file`) options may be used. Files read with `-f` are treated as if they begin with an implicit `@namespace "awk"` statement.
 
-Read the AWK program source from the file <u>program-file</u>, instead of from the first command line argument. Multiple `-f` (or `--file`) options may be used. Files read with `-f` are treated as if they begin with an implicit `@namespace "awk"` statement.
+`-F` <u>fs</u><br/>
+`--field-separator` <u>fs</u><br/>
+>Use <u>fs</u> for the input field separator (the value of the *FS* predefined variable).
+
+`-v` <u>var</u>=<u>val</u><br/>
+`--assign` u>var</u>=<u>val</u><br/>
+>Assign the value <u>val</u>, before execution of the program begins. Such variable values are available to the *BEGIN* rule of an *AWK* program.
+
+
+
+
