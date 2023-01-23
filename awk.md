@@ -45,6 +45,14 @@ Additionally, every long options has a corresponding short options, so that the 
 `--assign` *var=val*
 >Assign the value *val*, before execution of the program begins. Such variable values are available to the *BEGIN* rule of an *AWK* program.
 
+`-b`  
+`--characters-as-bytes`
+>Treat all input data as single-byte characters. In other words, don't pay any attention to the local information when attempting to process strings as multibyte charcters. The `--posix` option overrides this one.
+
+`-c`  
+`--traditional`  
+>Run in *compatibility* mode. In compatibility mode, *gawk* behaves identically to Brian Kernighan's *awk*; none of the GNU-specific extensions are recognized. See GNU EXTENSIONS, below, for more information.
+
 
 
 
