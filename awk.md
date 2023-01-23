@@ -30,3 +30,10 @@ When <u>gawk</u> is invoked with the `--profile` option, it starts gathering pro
 Additionally, every long options has a corresponding short options, so that the option's functionality may be used from within `#!` executable csripts.
 
 ## OPTIONS
+
+```<u>Gawk</u>``` accepts the following options. Standard options are listed first, followed by options for <u>gawk</u> extensions, listed alphabetically by short options.
+
+`-f` <u>program-file</u><br/>
+`--file` <u>program-file</u><br/>
+
+Read the AWK program source from the file <u>program-file</u>, instead of from the first command line argument. Multiple `-f` (or `--file`) options may be used. Files read with `-f` are treated as if they begin with an implicit `@namespace "awk"` statement.
